@@ -22,7 +22,8 @@ lazyinit = "0.2"
 timer_list = "0.1.0"
 
 # System dependent modules provided by ArceOS.
-axstd = { git = "https://github.com/arceos-hypervisor/arceos.git", branch = "vmm", features = [
+#axstd = { git = "https://github.com/arceos-hypervisor/arceos.git", branch = "vmm", features = [
+axstd = { git = "https://github.com/heirish/arceos-vmm.git", branch = "vmm", features = [
     "alloc",
     "paging",
     # "fs",
@@ -33,7 +34,8 @@ axstd = { git = "https://github.com/arceos-hypervisor/arceos.git", branch = "vmm
 ]}
 
 # System dependent modules provided by ArceOS-Hypervisor.
-axvm = { git = "https://github.com/arceos-hypervisor/axvm.git" }
+#axvm = { git = "https://github.com/arceos-hypervisor/axvm.git" }
+axvm = { path = "../axvm" }
 axvcpu = { git = "https://github.com/arceos-hypervisor/axvcpu.git" }
 axaddrspace = { git = "https://github.com/arceos-hypervisor/axaddrspace.git" }
 
@@ -47,7 +49,8 @@ percpu = { version = "0.2.0", features = ["arm-el2"] }
 
 [build-dependencies]
 toml = { git = "https://github.com/arceos-hypervisor/toml.git", branch = "no_std" }
-axconfig = { git = "https://github.com/arceos-hypervisor/arceos.git", branch = "vmm" }
+#axconfig = { git = "https://github.com/arceos-hypervisor/arceos.git", branch = "vmm" }
+axconfig = { git = "https://github.com/heirish/arceos-vmm.git", branch = "vmm" }
 prettyplease = "0.2"
 quote = "1.0"
 syn = "2.0"
